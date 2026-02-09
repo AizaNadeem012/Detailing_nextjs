@@ -1,5 +1,4 @@
 import { motion } from "framer-motion";
-import { Helmet } from "react-helmet-async";
 import { Navbar } from "@/components/Navbar";
 import { ContactSection } from "@/components/ContactSection";
 import { Footer } from "@/components/Footer";
@@ -573,17 +572,6 @@ const Contact = () => {
     <div className="min-h-screen bg-background">
       <Navbar />
       <main className="pt-24">
-        <Helmet>
-          <title>{contactPageMeta.title}</title>
-          <meta name="description" content={contactPageMeta.description} />
-          <meta name="keywords" content={contactPageMeta.keywords} />
-          <meta property="og:title" content={contactPageMeta.ogTitle} />
-          <meta property="og:description" content={contactPageMeta.ogDescription} />
-          <link rel="canonical" href={contactPageMeta.canonical} />
-          <script type="application/ld+json">
-            {JSON.stringify(contactPageMeta.schema)}
-          </script>
-        </Helmet>
         {/* 1. SEO-Optimized Hero Section */}
         <ContactHeroSection />
 

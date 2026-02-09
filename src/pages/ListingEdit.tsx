@@ -24,12 +24,19 @@ const initialListings: Listing[] = [
 
 const ListingEdit = () => {
   const [listings, setListings] = useState<Listing[]>(() => {
-    const saved = localStorage.getItem("listings");
-    return saved ? JSON.parse(saved) : initialListings;
+    // Only run on client side since localStorage is not available during SSR
+    if (typeof window !== 'undefined') {
+      const saved = localStorage.getItem("listings");
+      return saved ? JSON.parse(saved) : initialListings;
+    }
+    return initialListings;
   });
 
   useEffect(() => {
-    localStorage.setItem("listings", JSON.stringify(listings));
+    // Only run on client side since localStorage is not available during SSR
+    if (typeof window !== 'undefined') {
+      localStorage.setItem("listings", JSON.stringify(listings));
+    }
   }, [listings]);
 
   const handleSave = (data: Omit<Listing, "id"> & { id?: string }) => {

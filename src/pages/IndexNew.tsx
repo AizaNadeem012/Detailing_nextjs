@@ -1,7 +1,7 @@
 import { Navbar } from "@/components/Navbar";
 import { Footer } from "@/components/Footer";
 import { motion } from "framer-motion";
-import { Link } from "react-router-dom";
+import Link from "next/link";
 import { Button } from "@/components/ui/button";
 import {
   Phone,
@@ -22,7 +22,7 @@ import interiorImage from "@/assets/home/bmw-interior.jpg";
 import mustangImage from "@/assets/home/mustang-rear.jpg";
 import greenBmwImage from "@/assets/home/green-bmw.jpg";
 import mercedesImage from "@/assets/home/mercedes-amg-front.jpg";
-import { Helmet } from "react-helmet-async";
+
 
 // Semantic SEO Optimized Homepage for SRV Detailing
 // Following Koray Tuğberk GÜBÜR's Topical Authority Framework
@@ -79,9 +79,6 @@ const IndexNew = () => {
       <Navbar />
 
       <main className="overflow-hidden">
-        <Helmet>
-          <script type="application/ld+json">{JSON.stringify(faqSchema)}</script>
-        </Helmet>
         {/* Hero Section - Semantic H1 */}
         <HeroSection />
 
@@ -156,7 +153,7 @@ const HeroSection = () => {
             className="text-4xl sm:text-5xl lg:text-7xl font-extrabold text-white leading-tight mb-6 drop-shadow-lg"
           >
             Professional Mobile Car Valeting & Detailing Across{" "}
-            <Link to="/location" className="text-primary hover:text-primary/80 transition-colors">Manchester</Link>
+            <Link href="/location" className="text-primary hover:text-primary/80 transition-colors">Manchester</Link>
           </motion.h1>
 
           <motion.p
@@ -196,7 +193,7 @@ const HeroSection = () => {
               </a>
             </Button>
             <Button size="lg" variant="outline" className="px-8 py-6 text-lg font-bold bg-white/10 text-white border-white/30 hover:bg-white/20 backdrop-blur-sm" asChild>
-              <Link to="/contact">Book Your Service</Link>
+              <Link href="/contact">Book Your Service</Link>
             </Button>
           </motion.div>
 
@@ -312,7 +309,7 @@ const ComprehensiveServicesSection = () => {
             {services.map((service, index) => (
               <Link
                 key={service.name}
-                to={service.url}
+                href={service.url}
                 className="group bg-white p-6 rounded-xl shadow-md hover:shadow-xl transition-all duration-300 border-2 border-transparent hover:border-primary/20"
               >
                 <div className="flex items-start gap-3">
@@ -339,28 +336,28 @@ const ComprehensiveServicesSection = () => {
             className="prose prose-lg max-w-none text-muted-foreground space-y-6"
           >
             <p className="text-base sm:text-lg leading-relaxed">
-              Whether you need a <Link to="/services/full-valet" className="text-primary hover:underline font-semibold">full valet</Link> to
-              restore your vehicle's appearance inside and out, <Link to="/services/interior-valeting" className="text-primary hover:underline font-semibold">interior
-                valeting</Link> to deep clean your cabin, or <Link to="/services/exterior-valeting" className="text-primary hover:underline font-semibold">exterior
+              Whether you need a <Link href="/services/full-valet" className="text-primary hover:underline font-semibold">full valet</Link> to
+              restore your vehicle's appearance inside and out, <Link href="/services/interior-valeting" className="text-primary hover:underline font-semibold">interior
+                valeting</Link> to deep clean your cabin, or <Link href="/services/exterior-valeting" className="text-primary hover:underline font-semibold">exterior
                   valeting</Link> to protect your paintwork, we deliver professional results at your home or workplace across Manchester.
             </p>
 
             <p className="text-base sm:text-lg leading-relaxed">
-              For busy professionals and families, our <Link to="/services/mini-valet" className="text-primary hover:underline font-semibold">mini
+              For busy professionals and families, our <Link href="/services/mini-valet" className="text-primary hover:underline font-semibold">mini
                 valet</Link> service provides quick maintenance cleaning that fits your schedule. When your vehicle requires more
-              comprehensive attention, our <Link to="/services/paint-correction" className="text-primary hover:underline font-semibold">paint
-                correction</Link> service removes swirl marks and scratches, while <Link to="/services/ceramic-coating" className="text-primary hover:underline font-semibold">ceramic
+              comprehensive attention, our <Link href="/services/paint-correction" className="text-primary hover:underline font-semibold">paint
+                correction</Link> service removes swirl marks and scratches, while <Link href="/services/ceramic-coating" className="text-primary hover:underline font-semibold">ceramic
                   coating</Link> provides years of durable protection against the elements.
             </p>
 
             <p className="text-base sm:text-lg leading-relaxed">
-              Our specialist services address specific needs: <Link to="/services/headlight-restoration" className="text-primary hover:underline font-semibold">headlight
-                restoration</Link> improves visibility and safety, <Link to="/services/pet-hair-removal" className="text-primary hover:underline font-semibold">pet
-                  hair removal</Link> tackles embedded animal hair, <Link to="/services/odour-removal" className="text-primary hover:underline font-semibold">odour
-                    removal</Link> eliminates persistent smells, <Link to="/services/engine-bay-detailing" className="text-primary hover:underline font-semibold">engine
-                      bay detailing</Link> cleans your compartment, and <Link to="/services/leather-conditioning" className="text-primary hover:underline font-semibold">leather
+              Our specialist services address specific needs: <Link href="/services/headlight-restoration" className="text-primary hover:underline font-semibold">headlight
+                restoration</Link> improves visibility and safety, <Link href="/services/pet-hair-removal" className="text-primary hover:underline font-semibold">pet
+                  hair removal</Link> tackles embedded animal hair, <Link href="/services/odour-removal" className="text-primary hover:underline font-semibold">odour
+                    removal</Link> eliminates persistent smells, <Link href="/services/engine-bay-detailing" className="text-primary hover:underline font-semibold">engine
+                      bay detailing</Link> cleans your compartment, and <Link href="/services/leather-conditioning" className="text-primary hover:underline font-semibold">leather
                         conditioning</Link> preserves your luxury interior. For complete vehicle transformation,
-              our <Link to="/services/car-detailing" className="text-primary hover:underline font-semibold">car detailing</Link> packages
+              our <Link href="/services/car-detailing" className="text-primary hover:underline font-semibold">car detailing</Link> packages
               combine multiple services for showroom-exceeding results.
             </p>
 
@@ -379,7 +376,7 @@ const ComprehensiveServicesSection = () => {
             transition={{ delay: 0.4 }}
             className="mt-12 text-center"
           >
-            <Link to="/services" className="inline-flex items-center gap-2 bg-primary hover:bg-primary/90 text-white px-8 py-4 rounded-lg font-bold text-lg transition-all shadow-lg">
+            <Link href="/services" className="inline-flex items-center gap-2 bg-primary hover:bg-primary/90 text-white px-8 py-4 rounded-lg font-bold text-lg transition-all shadow-lg">
               View All Services
               <Sparkles className="w-5 h-5" />
             </Link>
@@ -702,7 +699,7 @@ const AdvancedDetailingSection = () => {
               className="text-2xl sm:text-3xl font-bold mb-6 text-foreground flex items-center gap-3"
             >
               <Shield className="w-7 h-7 text-primary" />
-              <Link to="/services" className="hover:text-primary transition-colors">Ceramic Coating</Link> & Long-Term Paint Protection
+              <Link href="/services" className="hover:text-primary transition-colors">Ceramic Coating</Link> & Long-Term Paint Protection
             </motion.h3>
 
             <motion.div
@@ -1094,7 +1091,7 @@ const EnhancedServiceAreaSection = () => {
             {locations.map((location, index) => (
               <Link
                 key={location.name}
-                to={location.url}
+                href={location.url}
                 className="group flex items-start gap-3 bg-white p-4 rounded-lg shadow-sm hover:shadow-md transition-all duration-300 border-2 border-transparent hover:border-primary/20"
               >
                 <MapPin className="w-5 h-5 text-primary flex-shrink-0 mt-0.5 group-hover:scale-110 transition-transform" />
@@ -1119,24 +1116,24 @@ const EnhancedServiceAreaSection = () => {
             className="prose prose-lg max-w-none text-muted-foreground space-y-6"
           >
             <p className="text-base sm:text-lg leading-relaxed">
-              Our mobile valeting service covers all major areas across Greater Manchester. From <Link to="/locations/manchester-city-centre" className="text-primary hover:underline font-semibold">Manchester
+              Our mobile valeting service covers all major areas across Greater Manchester. From <Link href="/locations/manchester-city-centre" className="text-primary hover:underline font-semibold">Manchester
                 City Centre</Link> office car parks and apartment buildings to residential driveways
-              in <Link to="/mobile-car-valeting-stockport" className="text-primary hover:underline font-semibold">Stockport</Link>, <Link to="/locations/bramhall" className="text-primary hover:underline font-semibold">Bramhall</Link>,
-              and <Link to="/locations/cheadle" className="text-primary hover:underline font-semibold">Cheadle</Link>, we bring professional vehicle care directly to you.
+              in <Link href="/mobile-car-valeting-stockport" className="text-primary hover:underline font-semibold">Stockport</Link>, <Link href="/locations/bramhall" className="text-primary hover:underline font-semibold">Bramhall</Link>,
+              and <Link href="/locations/cheadle" className="text-primary hover:underline font-semibold">Cheadle</Link>, we bring professional vehicle care directly to you.
             </p>
 
             <p className="text-base sm:text-lg leading-relaxed">
-              We regularly service vehicles across <Link to="/locations/salford" className="text-primary hover:underline font-semibold">Salford</Link> and
-              the <Link to="/locations/trafford" className="text-primary hover:underline font-semibold">Trafford</Link> area, including <Link to="/locations/altrincham" className="text-primary hover:underline font-semibold">Altrincham</Link>, <Link to="/locations/sale" className="text-primary hover:underline font-semibold">Sale</Link>,
-              and surrounding suburbs. South Manchester locations like <Link to="/locations/didsbury" className="text-primary hover:underline font-semibold">Didsbury</Link> and <Link to="/locations/chorlton" className="text-primary hover:underline font-semibold">Chorlton</Link> benefit
+              We regularly service vehicles across <Link href="/locations/salford" className="text-primary hover:underline font-semibold">Salford</Link> and
+              the <Link href="/locations/trafford" className="text-primary hover:underline font-semibold">Trafford</Link> area, including <Link href="/locations/altrincham" className="text-primary hover:underline font-semibold">Altrincham</Link>, <Link href="/locations/sale" className="text-primary hover:underline font-semibold">Sale</Link>,
+              and surrounding suburbs. South Manchester locations like <Link href="/locations/didsbury" className="text-primary hover:underline font-semibold">Didsbury</Link> and <Link href="/locations/chorlton" className="text-primary hover:underline font-semibold">Chorlton</Link> benefit
               from our convenient mobile service, eliminating the need to visit fixed-location car washes or detailing studios.
             </p>
 
             <p className="text-base sm:text-lg leading-relaxed">
-              North Manchester coverage includes <Link to="/locations/bolton" className="text-primary hover:underline font-semibold">Bolton</Link>, <Link to="/locations/bury" className="text-primary hover:underline font-semibold">Bury</Link>,
-              and <Link to="/locations/rochdale" className="text-primary hover:underline font-semibold">Rochdale</Link>, while east Manchester areas
-              like <Link to="/locations/oldham" className="text-primary hover:underline font-semibold">Oldham</Link> and <Link to="/locations/tameside" className="text-primary hover:underline font-semibold">Tameside</Link> receive
-              the same professional mobile service. We also travel to <Link to="/locations/wigan" className="text-primary hover:underline font-semibold">Wigan</Link> and
+              North Manchester coverage includes <Link href="/locations/bolton" className="text-primary hover:underline font-semibold">Bolton</Link>, <Link href="/locations/bury" className="text-primary hover:underline font-semibold">Bury</Link>,
+              and <Link href="/locations/rochdale" className="text-primary hover:underline font-semibold">Rochdale</Link>, while east Manchester areas
+              like <Link href="/locations/oldham" className="text-primary hover:underline font-semibold">Oldham</Link> and <Link href="/locations/tameside" className="text-primary hover:underline font-semibold">Tameside</Link> receive
+              the same professional mobile service. We also travel to <Link href="/locations/wigan" className="text-primary hover:underline font-semibold">Wigan</Link> and
               surrounding Greater Manchester areas, providing comprehensive coverage throughout the region.
             </p>
 
@@ -1156,7 +1153,7 @@ const EnhancedServiceAreaSection = () => {
             transition={{ delay: 0.4 }}
             className="mt-12 text-center"
           >
-            <Link to="/location" className="inline-flex items-center gap-2 bg-primary hover:bg-primary/90 text-white px-8 py-4 rounded-lg font-bold text-lg transition-all shadow-lg">
+            <Link href="/location" className="inline-flex items-center gap-2 bg-primary hover:bg-primary/90 text-white px-8 py-4 rounded-lg font-bold text-lg transition-all shadow-lg">
               View All Locations
               <MapPin className="w-5 h-5" />
             </Link>
@@ -1220,7 +1217,7 @@ const FinalCTASection = () => {
               </a>
             </Button>
             <Button size="lg" variant="outline" className="px-10 py-7 text-lg font-semibold" asChild>
-              <Link to="/contact">
+              <Link href="/contact">
                 <Calendar className="w-5 h-5 mr-2" />
                 Book Online
               </Link>
@@ -1272,7 +1269,7 @@ const FAQSection = () => {
             />
             <FAQItem
               question="Do you cover my area?"
-              answer={<>We cover all of Greater Manchester and Cheshire, including <Link to="/location" className="text-primary underline">Stockport</Link>, Manchester City Centre, Trafford, Altrincham, Wilmslow, and surrounding areas. If you are unsure, just give us a call!</>}
+              answer={<>We cover all of Greater Manchester and Cheshire, including <Link href="/location" className="text-primary underline">Stockport</Link>, Manchester City Centre, Trafford, Altrincham, Wilmslow, and surrounding areas. If you are unsure, just give us a call!</>}
             />
           </div>
         </div>
