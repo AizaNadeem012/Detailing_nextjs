@@ -1,5 +1,5 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import Link from 'next/link';
 import { Navbar } from "@/components/Navbar";
 import { Helmet } from 'react-helmet-async';
 import { Phone, MapPin, Clock, CheckCircle, Star, Sparkles } from 'lucide-react';
@@ -79,7 +79,7 @@ const FullValet = () => {
                 Call 07375 759686
               </a>
               <Link
-                to="/contact"
+                href="/contact"
                 className="inline-flex items-center gap-2 bg-blue-700 text-white px-8 py-4 rounded-lg font-bold text-lg hover:bg-blue-600 transition-all shadow-lg border-2 border-blue-500"
               >
                 Get a Quote
@@ -320,7 +320,7 @@ const FullValet = () => {
               ].map((location, index) => (
                 <Link
                   key={index}
-                  to={`/locations/${location.toLowerCase().replace(/ /g, '-')}`}
+                  href={`/locations/${location.toLowerCase().replace(/ /g, '-')}`}
                   className="bg-white border-2 border-slate-200 rounded-lg p-4 text-center hover:border-blue-500 hover:bg-blue-50 transition-all"
                 >
                   <MapPin className="w-5 h-5 text-blue-600 mx-auto mb-2" />
@@ -363,7 +363,7 @@ const FullValet = () => {
               ].map((service, index) => (
                 <Link
                   key={index}
-                  to={service.link}
+                  href={service.link}
                   className="bg-slate-800 rounded-xl p-6 hover:bg-slate-700 transition-colors border-2 border-slate-700 hover:border-blue-500"
                 >
                   <h3 className="text-xl font-bold text-blue-300 mb-3">{service.title}</h3>

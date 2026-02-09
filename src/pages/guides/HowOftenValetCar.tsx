@@ -1,5 +1,5 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import Link from 'next/link';
 import { Navbar } from "@/components/Navbar";
 import { Helmet } from 'react-helmet-async';
 import { Phone, Calendar, CheckCircle, Car, Clock, Info } from 'lucide-react';
@@ -294,7 +294,7 @@ const HowOftenValetCar = () => {
                             </div>
                         </div>
                         <p className="mt-6 text-muted-foreground">
-                            For more seasonal care advice, see our <Link to="/guides/winter-car-care" className="text-primary underline">winter car care</Link> and <Link to="/guides/summer-car-care" className="text-primary underline">summer car care</Link> guides.
+                            For more seasonal care advice, see our <Link href="/guides/winter-car-care" className="text-primary underline">winter car care</Link> and <Link href="/guides/summer-car-care" className="text-primary underline">summer car care</Link> guides.
                         </p>
                     </section>
 
@@ -481,19 +481,19 @@ const HowOftenValetCar = () => {
                     <section className="mb-16">
                         <h2 className="text-3xl font-bold mb-6">Related Guides</h2>
                         <div className="grid md:grid-cols-3 gap-6">
-                            <Link to="/guides/what-is-car-valeting" className="block p-6 bg-slate-50 rounded-xl border border-slate-200 hover:border-primary transition-colors">
+                            <Link href="/guides/what-is-car-valeting" className="block p-6 bg-slate-50 rounded-xl border border-slate-200 hover:border-primary transition-colors">
                                 <Car className="w-8 h-8 text-primary mb-3" />
                                 <h3 className="font-bold mb-2">What is Car Valeting?</h3>
                                 <p className="text-sm text-muted-foreground">Complete guide to valeting services</p>
                             </Link>
 
-                            <Link to="/guides/winter-car-care" className="block p-6 bg-slate-50 rounded-xl border border-slate-200 hover:border-primary transition-colors">
+                            <Link href="/guides/winter-car-care" className="block p-6 bg-slate-50 rounded-xl border border-slate-200 hover:border-primary transition-colors">
                                 <Calendar className="w-8 h-8 text-primary mb-3" />
                                 <h3 className="font-bold mb-2">Winter Car Care</h3>
                                 <p className="text-sm text-muted-foreground">Protect your car in winter months</p>
                             </Link>
 
-                            <Link to="/guides/mobile-valeting-benefits" className="block p-6 bg-slate-50 rounded-xl border border-slate-200 hover:border-primary transition-colors">
+                            <Link href="/guides/mobile-valeting-benefits" className="block p-6 bg-slate-50 rounded-xl border border-slate-200 hover:border-primary transition-colors">
                                 <CheckCircle className="w-8 h-8 text-primary mb-3" />
                                 <h3 className="font-bold mb-2">Mobile Valeting Benefits</h3>
                                 <p className="text-sm text-muted-foreground">Why choose mobile service</p>

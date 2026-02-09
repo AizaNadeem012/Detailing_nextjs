@@ -1,5 +1,5 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import Link from 'next/link';
 import { Navbar } from "@/components/Navbar";
 import { Helmet } from 'react-helmet-async';
 import { Phone, MapPin, Eye, CheckCircle, Star, Droplets } from 'lucide-react';
@@ -74,7 +74,7 @@ const HeadlightRestoration = () => {
                                 <Phone className="w-5 h-5" />
                                 Call 07375 759686
                             </a>
-                            <Link to="/contact" className="inline-flex items-center gap-2 bg-blue-700 text-white px-8 py-4 rounded-lg font-bold text-lg border-2 border-blue-500 shadow-lg font-display">
+                            <Link href="/contact" className="inline-flex items-center gap-2 bg-blue-700 text-white px-8 py-4 rounded-lg font-bold text-lg border-2 border-blue-500 shadow-lg font-display">
                                 Book Now
                             </Link>
                         </div>

@@ -1,15 +1,17 @@
 import { motion } from "framer-motion";
-import { Link, useLocation } from "react-router-dom";
+import Link from "next/link";
 import { useEffect } from "react";
+import { useRouter } from "next/router";
 import { Home, ArrowLeft } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
 const NotFound = () => {
-  const location = useLocation();
+  const router = useRouter();
+  const pathname = router.asPath;
 
   useEffect(() => {
-    console.error("404 Error: User attempted to access non-existent route:", location.pathname);
-  }, [location.pathname]);
+    console.error("404 Error: User attempted to access non-existent route:", pathname);
+  }, [pathname]);
 
   return (
     <div className="min-h-screen bg-background flex items-center justify-center">
@@ -35,7 +37,7 @@ const NotFound = () => {
         
         <div className="flex flex-wrap gap-4 justify-center">
           <Button variant="hero" asChild>
-            <Link to="/">
+            <Link href="/">
               <Home className="w-4 h-4" />
               Go Home
             </Link>

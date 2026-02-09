@@ -1,5 +1,5 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import Link from 'next/link';
 import { Navbar } from "@/components/Navbar";
 import { Helmet } from 'react-helmet-async';
 import { Phone, MapPin, Clock, CheckCircle, Car, Sparkles, Info, Shield } from 'lucide-react';
@@ -60,7 +60,7 @@ const WhatIsCarDetailing = () => {
                         <h2 className="text-3xl font-bold mb-6">Car Detailing Defined</h2>
                         <div className="prose prose-lg text-muted-foreground max-w-none">
                             <p className="mb-4">
-                                Car detailing is the meticulous process of restoring, correcting, and protecting a vehicle's appearance to perfection or beyond-new condition. Unlike <Link to="/guides/what-is-car-valeting" className="text-primary underline">valeting (which is cleaning)</Link>, detailing is restoration and enhancement. It involves paint correction to remove imperfections, ceramic coating or premium protection application, interior restoration and protection, and obsessive attention to every detail.
+                                Car detailing is the meticulous process of restoring, correcting, and protecting a vehicle's appearance to perfection or beyond-new condition. Unlike <Link href="/guides/what-is-car-valeting" className="text-primary underline">valeting (which is cleaning)</Link>, detailing is restoration and enhancement. It involves paint correction to remove imperfections, ceramic coating or premium protection application, interior restoration and protection, and obsessive attention to every detail.
                             </p>
                             <p className="mb-4">
                                 Professional detailing can take anywhere from 4 hours for a basic enhancement detail to 20+ hours for a full correction and protection detail on a larger or heavily damaged vehicle. The investment is significant, but the results are transformative – your vehicle will look better than showroom condition and be protected for years.
@@ -217,7 +217,7 @@ const WhatIsCarDetailing = () => {
                             </table>
                         </div>
                         <p className="mt-6 text-muted-foreground">
-                            For a detailed comparison, see our <Link to="/guides/valeting-vs-detailing" className="text-primary underline">complete valeting vs detailing guide</Link>.
+                            For a detailed comparison, see our <Link href="/guides/valeting-vs-detailing" className="text-primary underline">complete valeting vs detailing guide</Link>.
                         </p>
                     </section>
 
@@ -284,7 +284,7 @@ const WhatIsCarDetailing = () => {
                             </div>
 
                             <p className="mt-6">
-                                Learn more in our detailed <Link to="/guides/paint-correction-guide" className="text-primary underline">paint correction guide</Link>.
+                                Learn more in our detailed <Link href="/guides/paint-correction-guide" className="text-primary underline">paint correction guide</Link>.
                             </p>
                         </div>
                     </section>
@@ -396,7 +396,7 @@ const WhatIsCarDetailing = () => {
                             </div>
 
                             <p className="mt-6">
-                                Explore our comprehensive <Link to="/guides/ceramic-coating-guide" className="text-primary underline">ceramic coating guide</Link> for more details.
+                                Explore our comprehensive <Link href="/guides/ceramic-coating-guide" className="text-primary underline">ceramic coating guide</Link> for more details.
                             </p>
                         </div>
                     </section>
@@ -667,19 +667,19 @@ const WhatIsCarDetailing = () => {
                     <section className="mb-16">
                         <h2 className="text-3xl font-bold mb-6">Related Services & Guides</h2>
                         <div className="grid md:grid-cols-3 gap-6">
-                            <Link to="/services/paint-correction" className="block p-6 bg-slate-50 rounded-xl border border-slate-200 hover:border-primary transition-colors">
+                            <Link href="/services/paint-correction" className="block p-6 bg-slate-50 rounded-xl border border-slate-200 hover:border-primary transition-colors">
                                 <Sparkles className="w-8 h-8 text-primary mb-3" />
                                 <h3 className="font-bold mb-2">Paint Correction</h3>
                                 <p className="text-sm text-muted-foreground">Remove swirls and scratches professionally</p>
                             </Link>
 
-                            <Link to="/services/ceramic-coating" className="block p-6 bg-slate-50 rounded-xl border border-slate-200 hover:border-primary transition-colors">
+                            <Link href="/services/ceramic-coating" className="block p-6 bg-slate-50 rounded-xl border border-slate-200 hover:border-primary transition-colors">
                                 <Shield className="w-8 h-8 text-primary mb-3" />
                                 <h3 className="font-bold mb-2">Ceramic Coating</h3>
                                 <p className="text-sm text-muted-foreground">Long-term paint protection</p>
                             </Link>
 
-                            <Link to="/guides/valeting-vs-detailing" className="block p-6 bg-slate-50 rounded-xl border border-slate-200 hover:border-primary transition-colors">
+                            <Link href="/guides/valeting-vs-detailing" className="block p-6 bg-slate-50 rounded-xl border border-slate-200 hover:border-primary transition-colors">
                                 <Info className="w-8 h-8 text-primary mb-3" />
                                 <h3 className="font-bold mb-2">Valeting vs Detailing</h3>
                                 <p className="text-sm text-muted-foreground">Understand the key differences</p>

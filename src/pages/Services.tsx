@@ -15,7 +15,7 @@ import {
   Clock
 } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import { Link } from "react-router-dom";
+import Link from "next/link";
 import greenBmwImage from "@/assets/home/green-bmw.jpg";
 import mustangRearImage from "@/assets/home/mustang-rear.jpg";
 
@@ -105,7 +105,7 @@ const HeroSection = () => {
               </a>
             </Button>
             <Button size="lg" variant="outline" className="px-8 py-6 text-lg" asChild>
-              <Link to="/contact">
+              <Link href="/contact">
                 <Calendar className="w-5 h-5 mr-2" />
                 Request Quote
               </Link>
@@ -844,7 +844,7 @@ const BookingSection = () => {
               </a>
             </Button>
             <Button size="lg" variant="outline" className="px-10 py-7 text-lg font-semibold" asChild>
-              <Link to="/contact">
+              <Link href="/contact">
                 <Calendar className="w-5 h-5 mr-2" />
                 Request Quote
               </Link>

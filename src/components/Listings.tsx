@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { motion } from "framer-motion";
 import { Pencil, Trash2, Search, Plus } from "lucide-react";
-import { Link } from "react-router-dom";
+import Link from "next/link";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Badge } from "@/components/ui/badge";
@@ -50,7 +50,7 @@ export function ListingsTable({ listings, onDelete }: ListingsTableProps) {
           />
         </div>
         <Button variant="hero" asChild>
-          <Link to="/listings/add">
+          <Link href="/listings/add">
             <Plus className="w-4 h-4" />
             Add Listing
           </Link>
@@ -101,7 +101,7 @@ export function ListingsTable({ listings, onDelete }: ListingsTableProps) {
                     <TableCell className="text-right">
                       <div className="flex justify-end gap-2">
                         <Button variant="ghost" size="icon" asChild>
-                          <Link to={`/listings/edit/${listing.id}`}>
+                          <Link href={`/listings/edit/${listing.id}`}>
                             <Pencil className="w-4 h-4" />
                           </Link>
                         </Button>

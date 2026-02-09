@@ -1,89 +1,20 @@
 {
   "pages": {
-    "/about-us/page": [
-      "static/chunks/webpack-d9767aaa662430db.js",
-      "static/chunks/fd9d1056-3f09974253ab9e1f.js",
-      "static/chunks/2117-63beba960e4e3c92.js",
-      "static/chunks/main-app-97dfc6bfa8bbb0f7.js",
-      "static/chunks/4651-eafc1011cbb00ca5.js",
-      "static/chunks/app/about-us/page-c2808d2704837a10.js"
+    "/page": [
+      "static/chunks/webpack.js",
+      "static/chunks/main-app.js",
+      "static/chunks/app/page.js"
     ],
     "/layout": [
-      "static/chunks/webpack-d9767aaa662430db.js",
-      "static/chunks/fd9d1056-3f09974253ab9e1f.js",
-      "static/chunks/2117-63beba960e4e3c92.js",
-      "static/chunks/main-app-97dfc6bfa8bbb0f7.js",
-      "static/css/b9da1d73a0265352.css",
-      "static/css/4829b0e1cfce0348.css",
-      "static/chunks/5193-e0cbd766b84112b9.js",
-      "static/chunks/app/layout-2324942c201974c6.js"
+      "static/chunks/webpack.js",
+      "static/chunks/main-app.js",
+      "static/css/app/layout.css",
+      "static/chunks/app/layout.js"
     ],
     "/not-found": [
-      "static/chunks/webpack-d9767aaa662430db.js",
-      "static/chunks/fd9d1056-3f09974253ab9e1f.js",
-      "static/chunks/2117-63beba960e4e3c92.js",
-      "static/chunks/main-app-97dfc6bfa8bbb0f7.js",
-      "static/chunks/4651-eafc1011cbb00ca5.js",
-      "static/chunks/app/not-found-62bf987598f65669.js"
-    ],
-    "/contact/page": [
-      "static/chunks/webpack-d9767aaa662430db.js",
-      "static/chunks/fd9d1056-3f09974253ab9e1f.js",
-      "static/chunks/2117-63beba960e4e3c92.js",
-      "static/chunks/main-app-97dfc6bfa8bbb0f7.js",
-      "static/chunks/4651-eafc1011cbb00ca5.js",
-      "static/chunks/213-2edb28eb007df06b.js",
-      "static/chunks/app/contact/page-a252ab0b4c591a88.js"
-    ],
-    "/blog/page": [
-      "static/chunks/webpack-d9767aaa662430db.js",
-      "static/chunks/fd9d1056-3f09974253ab9e1f.js",
-      "static/chunks/2117-63beba960e4e3c92.js",
-      "static/chunks/main-app-97dfc6bfa8bbb0f7.js",
-      "static/chunks/4651-eafc1011cbb00ca5.js",
-      "static/chunks/213-2edb28eb007df06b.js",
-      "static/chunks/app/blog/page-1d9b3880bc626867.js"
-    ],
-    "/page": [
-      "static/chunks/webpack-d9767aaa662430db.js",
-      "static/chunks/fd9d1056-3f09974253ab9e1f.js",
-      "static/chunks/2117-63beba960e4e3c92.js",
-      "static/chunks/main-app-97dfc6bfa8bbb0f7.js",
-      "static/chunks/4651-eafc1011cbb00ca5.js",
-      "static/chunks/213-2edb28eb007df06b.js",
-      "static/chunks/app/page-d5b4aee06968e779.js"
-    ],
-    "/locations/[slug]/page": [
-      "static/chunks/webpack-d9767aaa662430db.js",
-      "static/chunks/fd9d1056-3f09974253ab9e1f.js",
-      "static/chunks/2117-63beba960e4e3c92.js",
-      "static/chunks/main-app-97dfc6bfa8bbb0f7.js",
-      "static/chunks/4651-eafc1011cbb00ca5.js",
-      "static/chunks/app/locations/[slug]/page-dd397f6301643b46.js"
-    ],
-    "/services/[slug]/page": [
-      "static/chunks/webpack-d9767aaa662430db.js",
-      "static/chunks/fd9d1056-3f09974253ab9e1f.js",
-      "static/chunks/2117-63beba960e4e3c92.js",
-      "static/chunks/main-app-97dfc6bfa8bbb0f7.js",
-      "static/chunks/4651-eafc1011cbb00ca5.js",
-      "static/chunks/app/services/[slug]/page-71f230e6f1494944.js"
-    ],
-    "/services/page": [
-      "static/chunks/webpack-d9767aaa662430db.js",
-      "static/chunks/fd9d1056-3f09974253ab9e1f.js",
-      "static/chunks/2117-63beba960e4e3c92.js",
-      "static/chunks/main-app-97dfc6bfa8bbb0f7.js",
-      "static/chunks/4651-eafc1011cbb00ca5.js",
-      "static/chunks/213-2edb28eb007df06b.js",
-      "static/chunks/app/services/page-2cb30c3e7f76e093.js"
-    ],
-    "/_not-found/page": [
-      "static/chunks/webpack-d9767aaa662430db.js",
-      "static/chunks/fd9d1056-3f09974253ab9e1f.js",
-      "static/chunks/2117-63beba960e4e3c92.js",
-      "static/chunks/main-app-97dfc6bfa8bbb0f7.js",
-      "static/chunks/app/_not-found/page-758549684486bf16.js"
+      "static/chunks/webpack.js",
+      "static/chunks/main-app.js",
+      "static/chunks/app/not-found.js"
     ]
   }
 }

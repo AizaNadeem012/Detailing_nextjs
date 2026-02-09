@@ -1,5 +1,5 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import Link from 'next/link';
 import { Navbar } from "@/components/Navbar";
 import { Helmet } from 'react-helmet-async';
 import { Phone, MapPin, Clock, CheckCircle, Car, Sparkles, Info } from 'lucide-react';
@@ -197,7 +197,7 @@ const WhatIsCarValeting = () => {
                             <div className="border-l-4 border-primary pl-6 py-2">
                                 <h3 className="text-xl font-bold mb-2">Specialist Valets (£100-300+)</h3>
                                 <p className="text-muted-foreground">
-                                    Targeted services like <Link to="/services/pet-hair-removal" className="text-primary underline">pet hair removal</Link>, smoke odour elimination, or pre-sale preparation requiring extra time and specialist techniques.
+                                    Targeted services like <Link href="/services/pet-hair-removal" className="text-primary underline">pet hair removal</Link>, smoke odour elimination, or pre-sale preparation requiring extra time and specialist techniques.
                                 </p>
                             </div>
                         </div>
@@ -359,7 +359,7 @@ const WhatIsCarValeting = () => {
                                 <li>Local environmental conditions</li>
                             </ul>
                             <p className="mt-4">
-                                For more detailed guidance, see our <Link to="/guides/how-often-valet-car" className="text-primary underline">complete guide to valeting frequency</Link>.
+                                For more detailed guidance, see our <Link href="/guides/how-often-valet-car" className="text-primary underline">complete guide to valeting frequency</Link>.
                             </p>
                         </div>
                     </section>
@@ -586,7 +586,7 @@ const WhatIsCarValeting = () => {
                             </div>
                         </div>
                         <p className="mt-6 text-muted-foreground">
-                            For detailed guidance on selecting the right service, read our <Link to="/guides/choosing-car-valeting-service" className="text-primary underline">complete guide to choosing a car valeting service</Link>.
+                            For detailed guidance on selecting the right service, read our <Link href="/guides/choosing-car-valeting-service" className="text-primary underline">complete guide to choosing a car valeting service</Link>.
                         </p>
                     </section>
 
@@ -696,26 +696,26 @@ const WhatIsCarValeting = () => {
                             </div>
                         </div>
                         <p className="mt-6 text-muted-foreground">
-                            Learn more about the benefits of mobile services in our <Link to="/guides/mobile-valeting-benefits" className="text-primary underline">mobile valeting benefits guide</Link>.
+                            Learn more about the benefits of mobile services in our <Link href="/guides/mobile-valeting-benefits" className="text-primary underline">mobile valeting benefits guide</Link>.
                         </p>
                     </section>
 
                     <section className="mb-16">
                         <h2 className="text-3xl font-bold mb-6">Related Services</h2>
                         <div className="grid md:grid-cols-3 gap-6">
-                            <Link to="/services/full-valet" className="block p-6 bg-slate-50 rounded-xl border border-slate-200 hover:border-primary transition-colors">
+                            <Link href="/services/full-valet" className="block p-6 bg-slate-50 rounded-xl border border-slate-200 hover:border-primary transition-colors">
                                 <Sparkles className="w-8 h-8 text-primary mb-3" />
                                 <h3 className="font-bold mb-2">Full Valet</h3>
                                 <p className="text-sm text-muted-foreground">Complete interior and exterior transformation</p>
                             </Link>
 
-                            <Link to="/services/interior-valet" className="block p-6 bg-slate-50 rounded-xl border border-slate-200 hover:border-primary transition-colors">
+                            <Link href="/services/interior-valet" className="block p-6 bg-slate-50 rounded-xl border border-slate-200 hover:border-primary transition-colors">
                                 <Car className="w-8 h-8 text-primary mb-3" />
                                 <h3 className="font-bold mb-2">Interior Valet</h3>
                                 <p className="text-sm text-muted-foreground">Deep cleaning for your vehicle interior</p>
                             </Link>
 
-                            <Link to="/guides/what-is-car-detailing" className="block p-6 bg-slate-50 rounded-xl border border-slate-200 hover:border-primary transition-colors">
+                            <Link href="/guides/what-is-car-detailing" className="block p-6 bg-slate-50 rounded-xl border border-slate-200 hover:border-primary transition-colors">
                                 <Info className="w-8 h-8 text-primary mb-3" />
                                 <h3 className="font-bold mb-2">What is Car Detailing?</h3>
                                 <p className="text-sm text-muted-foreground">Learn about professional detailing services</p>

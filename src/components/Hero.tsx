@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { Link } from "react-router-dom";
+import Link from "next/link";
 import { Button } from "@/components/ui/button";
 import { Phone, Instagram, Shield, Droplets, Sparkles, Car } from "lucide-react";
 import heroImage from "@/assets/hero.jpeg"; // ✅ Correct imported image
@@ -80,10 +80,10 @@ export function Hero() {
 
             <div className="flex flex-wrap gap-4 mb-10">
               <Button variant="hero" size="lg" asChild>
-                <Link to="/contact">Book a Service</Link>
+                <Link href="/contact">Book a Service</Link>
               </Button>
               <Button variant="hero-outline" size="lg" asChild>
-                <Link to="/contact">Call Now</Link>
+                <Link href="/contact">Call Now</Link>
               </Button>
             </div>
 

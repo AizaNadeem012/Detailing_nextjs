@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import { useNavigate, useParams } from "react-router-dom";
+import { useRouter } from "next/router";
 import { motion } from "framer-motion";
 import { ArrowLeft, Eye, EyeOff } from "lucide-react";
 import { Button } from "@/components/ui/button";
@@ -21,8 +21,8 @@ interface ListingFormProps {
 }
 
 export function ListingForm({ listings, onSave }: ListingFormProps) {
-  const { id } = useParams();
-  const navigate = useNavigate();
+  const router = useRouter();
+  const id = Array.isArray(router.query.id) ? router.query.id[0] : router.query.id;
   const { toast } = useToast();
   const [showPassword, setShowPassword] = useState(false);
   
@@ -87,7 +87,7 @@ export function ListingForm({ listings, onSave }: ListingFormProps) {
       description: `${formData.website} has been ${isEditing ? "updated" : "added"} successfully.`,
     });
 
-    navigate("/listings");
+    router.push("/listings");
   };
 
   return (
@@ -99,7 +99,7 @@ export function ListingForm({ listings, onSave }: ListingFormProps) {
     >
       <Button
         variant="ghost"
-        onClick={() => navigate("/listings")}
+        onClick={() => router.push("/listings")}
         className="mb-6"
       >
         <ArrowLeft className="w-4 h-4 mr-2" />

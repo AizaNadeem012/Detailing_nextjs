@@ -1,5 +1,5 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import Link from 'next/link';
 import { Navbar } from "@/components/Navbar";
 import { Helmet } from 'react-helmet-async';
 import { Phone, MapPin, Clock, CheckCircle } from 'lucide-react';
@@ -247,7 +247,7 @@ const Chorlton = () => {
                         <ul className="space-y-2 mb-8">
                             <li className="flex items-center gap-2">
                                 <MapPin className="w-5 h-5 text-primary" />
-                                <Link to="/locations/didsbury" className="text-primary hover:underline font-medium">Didsbury</Link> (5 minutes)
+                                <Link href="/locations/didsbury" className="text-primary hover:underline font-medium">Didsbury</Link> (5 minutes)
                             </li>
                             <li className="flex items-center gap-2">
                                 <MapPin className="w-5 h-5 text-primary" />
@@ -259,7 +259,7 @@ const Chorlton = () => {
                             </li>
                             <li className="flex items-center gap-2">
                                 <MapPin className="w-5 h-5 text-primary" />
-                                <Link to="/locations/sale" className="text-primary hover:underline font-medium">Sale</Link> (10 minutes)
+                                <Link href="/locations/sale" className="text-primary hover:underline font-medium">Sale</Link> (10 minutes)
                             </li>
                             <li className="flex items-center gap-2">
                                 <MapPin className="w-5 h-5 text-primary" />

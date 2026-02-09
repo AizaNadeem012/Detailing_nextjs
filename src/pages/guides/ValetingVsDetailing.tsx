@@ -1,5 +1,5 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import Link from 'next/link';
 import { Navbar } from "@/components/Navbar";
 import { Helmet } from 'react-helmet-async';
 import { Phone, CheckCircle, Car, Sparkles, Info, Shield, ArrowRight } from 'lucide-react';
@@ -176,19 +176,19 @@ const ValetingVsDetailing = () => {
                         <div className="bg-slate-50 p-6 rounded-xl border border-slate-200">
                             <h3 className="text-xl font-bold mb-4">Valeting Services:</h3>
                             <div className="grid md:grid-cols-2 gap-4">
-                                <Link to="/services/mini-valet" className="flex items-center justify-between p-4 bg-white rounded-lg border border-slate-200 hover:border-primary transition-colors">
+                                <Link href="/services/mini-valet" className="flex items-center justify-between p-4 bg-white rounded-lg border border-slate-200 hover:border-primary transition-colors">
                                     <span className="font-semibold">Mini Valet</span>
                                     <span className="text-primary font-bold">£30-40</span>
                                 </Link>
-                                <Link to="/services/interior-valet" className="flex items-center justify-between p-4 bg-white rounded-lg border border-slate-200 hover:border-primary transition-colors">
+                                <Link href="/services/interior-valet" className="flex items-center justify-between p-4 bg-white rounded-lg border border-slate-200 hover:border-primary transition-colors">
                                     <span className="font-semibold">Interior Valet</span>
                                     <span className="text-primary font-bold">£45-70</span>
                                 </Link>
-                                <Link to="/services/exterior-valet" className="flex items-center justify-between p-4 bg-white rounded-lg border border-slate-200 hover:border-primary transition-colors">
+                                <Link href="/services/exterior-valet" className="flex items-center justify-between p-4 bg-white rounded-lg border border-slate-200 hover:border-primary transition-colors">
                                     <span className="font-semibold">Exterior Valet</span>
                                     <span className="text-primary font-bold">£35-50</span>
                                 </Link>
-                                <Link to="/services/full-valet" className="flex items-center justify-between p-4 bg-white rounded-lg border border-slate-200 hover:border-primary transition-colors">
+                                <Link href="/services/full-valet" className="flex items-center justify-between p-4 bg-white rounded-lg border border-slate-200 hover:border-primary transition-colors">
                                     <span className="font-semibold">Full Valet</span>
                                     <span className="text-primary font-bold">£75-150</span>
                                 </Link>
@@ -433,19 +433,19 @@ const ValetingVsDetailing = () => {
                     <section className="mb-16">
                         <h2 className="text-3xl font-bold mb-6">Related Guides</h2>
                         <div className="grid md:grid-cols-3 gap-6">
-                            <Link to="/guides/what-is-car-valeting" className="block p-6 bg-slate-50 rounded-xl border border-slate-200 hover:border-primary transition-colors">
+                            <Link href="/guides/what-is-car-valeting" className="block p-6 bg-slate-50 rounded-xl border border-slate-200 hover:border-primary transition-colors">
                                 <Car className="w-8 h-8 text-primary mb-3" />
                                 <h3 className="font-bold mb-2">What is Car Valeting?</h3>
                                 <p className="text-sm text-muted-foreground">Complete guide to car valeting services</p>
                             </Link>
 
-                            <Link to="/guides/what-is-car-detailing" className="block p-6 bg-slate-50 rounded-xl border border-slate-200 hover:border-primary transition-colors">
+                            <Link href="/guides/what-is-car-detailing" className="block p-6 bg-slate-50 rounded-xl border border-slate-200 hover:border-primary transition-colors">
                                 <Shield className="w-8 h-8 text-primary mb-3" />
                                 <h3 className="font-bold mb-2">What is Car Detailing?</h3>
                                 <p className="text-sm text-muted-foreground">Professional guide to car detailing</p>
                             </Link>
 
-                            <Link to="/guides/paint-correction-guide" className="block p-6 bg-slate-50 rounded-xl border border-slate-200 hover:border-primary transition-colors">
+                            <Link href="/guides/paint-correction-guide" className="block p-6 bg-slate-50 rounded-xl border border-slate-200 hover:border-primary transition-colors">
                                 <Sparkles className="w-8 h-8 text-primary mb-3" />
                                 <h3 className="font-bold mb-2">Paint Correction Guide</h3>
                                 <p className="text-sm text-muted-foreground">Learn about paint correction</p>

@@ -1,5 +1,5 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import Link from 'next/link';
 import { Navbar } from "@/components/Navbar";
 import { Helmet } from 'react-helmet-async';
 import { Phone, MapPin, Clock, CheckCircle, Star, Home } from 'lucide-react';
@@ -55,7 +55,7 @@ const InteriorValeting = () => {
                                 <Phone className="w-5 h-5" />
                                 Call 07375 759686
                             </a>
-                            <Link to="/contact" className="inline-flex items-center gap-2 bg-emerald-700 text-white px-8 py-4 rounded-lg font-bold text-lg hover:bg-emerald-600 transition-all shadow-lg border-2 border-emerald-500">
+                            <Link href="/contact" className="inline-flex items-center gap-2 bg-emerald-700 text-white px-8 py-4 rounded-lg font-bold text-lg hover:bg-emerald-600 transition-all shadow-lg border-2 border-emerald-500">
                                 Get a Quote
                             </Link>
                         </div>

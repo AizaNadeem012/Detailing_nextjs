@@ -1,5 +1,5 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import Link from 'next/link';
 import { Navbar } from "@/components/Navbar";
 import { Helmet } from 'react-helmet-async';
 import { Phone, MapPin, Clock, CheckCircle } from 'lucide-react';
@@ -171,7 +171,7 @@ const Bramhall = () => {
                         <ul className="space-y-2 mb-8">
                             <li className="flex items-center gap-2">
                                 <MapPin className="w-5 h-5 text-primary" />
-                                <Link to="/locations/cheadle" className="text-primary hover:underline font-medium">Cheadle</Link> (5 minutes)
+                                <Link href="/locations/cheadle" className="text-primary hover:underline font-medium">Cheadle</Link> (5 minutes)
                             </li>
                             <li className="flex items-center gap-2">
                                 <MapPin className="w-5 h-5 text-primary" />
@@ -187,7 +187,7 @@ const Bramhall = () => {
                             </li>
                             <li className="flex items-center gap-2">
                                 <MapPin className="w-5 h-5 text-primary" />
-                                <Link to="/locations/altrincham" className="text-primary hover:underline font-medium">Altrincham</Link> (15 minutes)
+                                <Link href="/locations/altrincham" className="text-primary hover:underline font-medium">Altrincham</Link> (15 minutes)
                             </li>
                         </ul>
                     </div>
