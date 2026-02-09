@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://www.srvdetailing.co.uk/sitemap.xml
